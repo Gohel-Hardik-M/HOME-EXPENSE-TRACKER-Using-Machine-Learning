@@ -12,6 +12,7 @@ What's New/Unique About This Project :
                            - Expense Predictions For Next Months Using Machine Learning Models (Created By Me)
                   
 Functionalities :
+
                          - Expenses Management 
                          - Expenses Analysis
                          - Expense Predictions For Next Months Using Machine Learning Models (Created By Me)
@@ -19,7 +20,9 @@ Functionalities :
                          - Report Download Option 
 
 
-Technolgied Used :      - Python   :
+Technolgied Used :      
+                         
+                         - Python   :
                                         => Core Programming Language Used for Backend Logic and Machine Leaning Implementation
                         - Flask (Python Library)  :
                                         => used as the web Framework to build the backend , handle routes and connects frontend logic to backend logic.
