@@ -7,6 +7,7 @@ About :
                   This is an Home Expense Tracker which stores the home expenses and also has functionality to analyse the expense  of user selected Month & Year  also predicts next 3 Months Expected Expenses so                 users can plan their trips or events based on that.
 
 What's New/Unique About This Project :
+
                            - Tips & Recommendations For Better Expense Management Using Machine Learning Model (Created By Me) Based on The Expenses Of the Months 
                            - Expense Predictions For Next Months Using Machine Learning Models (Created By Me)
                   
