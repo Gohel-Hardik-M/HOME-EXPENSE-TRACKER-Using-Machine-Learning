@@ -105,7 +105,7 @@ def analyse_action():
         plt.figure(figsize=(6,6))
         plt.pie(am,labels=cat,startangle=140)
         plt.title(f'Expense Analysis - {month}/{year}')
-        chart_dir = 'C:/Users/hardi/Downloads/CS(EH)/DS/projects/Home Expenses Tracker/static'
+        chart_dir = 'Home Expenses Tracker/static'
         chart_path = os.path.join(chart_dir,'pie_chart.png')
         os.makedirs(chart_dir, exist_ok=True)
         plt.savefig(chart_path)
@@ -123,7 +123,7 @@ def analyse_action():
            # category_model_result.append(category_model.predict([[i,month+1,year]]))
         
         #2) Next Months Predictions
-        with open('C:/Users/hardi/Downloads/CS(EH)/DS/projects/Home Expenses Tracker/expense_model.pkl','rb') as f:
+        with open('Home Expenses Tracker/expense_model.pkl','rb') as f:
             expense_model = pickle.load(f)
         months = ['January','February','March','April','May','June','July','August','September','October','November','December']
         months_expenses = []
@@ -136,11 +136,11 @@ def analyse_action():
         moonths =months[month:month+3]
         
         #3) Tips Model 
-        with open('C:/Users/hardi/Downloads/CS(EH)/DS/projects/Home Expenses Tracker/tips_model.pkl','rb') as f:
+        with open('Home Expenses Tracker/tips_model.pkl','rb') as f:
             tips_model = pickle.load(f)
-        with open('C:/Users/hardi/Downloads/CS(EH)/DS/projects/Home Expenses Tracker/le_cat.pkl','rb') as f:
+        with open('Home Expenses Tracker/le_cat.pkl','rb') as f:
             le_cat = pickle.load(f)
-        with open('C:/Users/hardi/Downloads/CS(EH)/DS/projects/Home Expenses Tracker/le_tip.pkl','rb') as f:
+        with open('Home Expenses Tracker/le_tip.pkl','rb') as f:
             le_tip = pickle.load(f)
             
         encode_category = {'Utilities':16,'Housing':16,'Medical':11,'Groceries':6,'Transportation':15,'Healthcare':9,'Entertainment':3,'Education':2,'Personal Care':12,'Savings':13,'Alcohol':0,'Fruits':4,'Gym':8,'Skincare':14,'Books':1,'Gifts':5}
