@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Expense Tracker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 60px; /* To account for fixed navbar */
+        }
+        
+        .navbar {
+            background-color: #4f46e5 !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar-brand {
+            font-weight: 600;
+            color: white !important;
+            font-size: 1.3rem;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.85) !important;
+            margin: 0 5px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link i {
+            margin-right: 5px;
+        }
+        
+        .container {
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #4f46e5;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: #4f46e5;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        form {
+            border: 1px solid #e0e0e0;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: white;
+            max-width: 500px;
+            margin: 30px auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            display: none; /* Initially hidden */
+        }
+
+        .form-title {
+            color: #4f46e5;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input:focus, select:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25);
+            outline: none;
+        }
+
+        button[type="submit"] {
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 500;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: all 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-wallet"></i> Home Expense Tracker
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="addExpenseNavBtn">
+                            <i class="fas fa-plus-circle"></i> Add Expense
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('analyse')}}">
+                            <i class="fas fa-chart-pie"></i> Analyze
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-lightbulb"></i> Tips
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="downloadExpensesBtn">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Expense List</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Expense</th>
+                <th>Price</th>
+            </tr>
+            {% for expense in exp %}
+            <tr>
+                <td>{{ expense.expense_date }}</td>
+                <td>{{ expense.category }}</td>
+                <td>{{ expense.amount }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <form action='/add' method='POST' id="expenseForm">
+            <h3 class="form-title">Add New Expense</h3>
+            <input type='date' name='date' placeholder='Enter The Date' required><br>
+            <select name='category' id="category" required>
+                <option value="">Select a category</option>
+                <option value="Housing">Housing</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Groceries">Groceries</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Education">Education</option>
+                <option value="Personal Care">Personal Care</option>
+                <option value="Debt Payments">Debt Payments</option>
+                <option value="Savings">Savings</option>
+                <option value="Alcohol">Alcohol</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Gym">Gym</option>
+                <option value="Skincare">Skincare</option>
+                <option value="Books">Books</option>
+                <option value="Gifts">Gifts</option>
+            </select><br>
+            <input type='text' name='description' placeholder='Enter The Description For That...' required><br>
+            <input type='number' name='amount' placeholder='Enter Price Of Expense..' required><br>
+            <select name='payment_mode' id="payment_mode" required>
+                <option value="">Select a payment mode</option>
+                <option value="online">Online</option>
+                <option value="cash">Cash</option>
+                <option value="credit card">Credit Card</option>
+                <option value="debit card">Debit Card</option>
+                <option value="other">Other</option>
+            </select><br>
+            <button type="submit">Add Expense</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Toggle form visibility when Add Expense nav button is clicked
+            $('#addExpenseNavBtn').click(function(e) {
+                e.preventDefault();
+                $('#expenseForm').slideToggle();
+                $('html, body').animate({
+                    scrollTop: $('#expenseForm').offset().top - 20
+                }, 500);
+            });
+
+            // Download Expenses functionality
+            $('#downloadExpensesBtn').click(function(e) {
+                e.preventDefault();
+                // This would need backend implementation to generate the file
+                alert("This would download your expenses as a CSV file. You'll need to implement the backend functionality.");
+                
+                // Example of how you might implement this:
+                // window.location.href = '/download-expenses';
+            });
+        });
+    </script>
+</body>
+</html>

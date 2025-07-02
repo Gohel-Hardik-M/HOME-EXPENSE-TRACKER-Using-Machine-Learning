@@ -1,0 +1,101 @@
+id,date,amount,category,description
+1,2025-01-01,150.00,icecream,Bought an Icecream
+2,2025-01-02,75.50,food,Bought food from hotel
+3,2025-01-03,200.00,entertainment,Movie tickets for cinema
+4,2025-01-04,50.25,transport,Taxi ride to airport
+5,2025-01-05,300.00,bills,Electricity bill payment
+6,2025-01-06,120.00,shopping,New clothes from mall
+7,2025-01-07,45.00,groceries,Grocery shopping at market
+8,2025-01-08,80.00,utilities,Internet bill for January
+9,2025-01-09,90.75,dining,Dinner at Italian restaurant
+10,2025-01-10,150.00,travel,Bus ticket to nearby city
+11,2025-02-01,95.00,icecream,Bought assorted icecream
+12,2025-02-02,60.00,food,Lunch at cafe
+13,2025-02-03,230.00,entertainment,Concert tickets
+14,2025-02-04,40.00,transport,Subway pass refill
+15,2025-02-05,280.00,bills,Water bill settlement
+16,2025-02-06,180.00,shopping,Shoes purchase
+17,2025-02-07,55.00,groceries,Fruits and vegetables
+18,2025-02-08,70.00,utilities,Gas bill payment
+19,2025-02-09,105.00,dining,Family dinner outing
+20,2025-02-10,200.00,travel,Train ticket to coast
+21,2025-03-01,125.00,icecream,Gourmet icecream
+22,2025-03-02,80.00,food,Restaurant meal
+23,2025-03-03,260.00,entertainment,Theme park entry
+24,2025-03-04,45.00,transport,Bus fare
+25,2025-03-05,300.00,bills,Mobile phone bill
+26,2025-03-06,90.00,shopping,Accessory purchase
+27,2025-03-07,65.00,groceries,Weekly groceries
+28,2025-03-08,75.00,utilities,Monthly subscription
+29,2025-03-09,110.00,dining,Casual cafe lunch
+30,2025-03-10,220.00,travel,Airline ticket
+31,2025-04-01,85.00,icecream,Icecream with friends
+32,2025-04-02,68.00,food,Takeout meal
+33,2025-04-03,250.00,entertainment,Theater play tickets
+34,2025-04-04,30.00,transport,Parking fees
+35,2025-04-05,290.00,bills,Health insurance
+36,2025-04-06,130.00,shopping,Home decoration items
+37,2025-04-07,70.00,groceries,Supermarket visit
+38,2025-04-08,95.00,utilities,Electricity bill
+39,2025-04-09,100.00,dining,Coffee shop snacks
+40,2025-04-10,205.00,travel,Flight tickets
+41,2025-05-01,100.00,icecream,Cold icecream treat
+42,2025-05-02,65.00,food,Vegetarian lunch
+43,2025-05-03,230.00,entertainment,Jazz concert
+44,2025-05-04,55.00,transport,Taxi service
+45,2025-05-05,310.00,bills,Internet provider
+46,2025-05-06,145.00,shopping,Electronics gadget
+47,2025-05-07,60.00,groceries,Frozen meals
+48,2025-05-08,85.00,utilities,Phone line bill
+49,2025-05-09,120.00,dining,Fine dining experience
+50,2025-05-10,190.00,travel,Cruise ticket
+51,2025-06-01,95.00,icecream,Icecream snacks
+52,2025-06-02,70.00,food,Healthy lunch
+53,2025-06-03,240.00,entertainment,Art gallery tickets
+54,2025-06-04,50.00,transport,Taxi to airport
+55,2025-06-05,310.00,bills,Gas and electric combined
+56,2025-06-06,170.00,shopping,Smartphone accessories
+57,2025-06-07,60.00,groceries,Organic produce
+58,2025-06-08,80.00,utilities,Home security bill
+59,2025-06-09,120.00,dining,Family brunch
+60,2025-06-10,200.00,travel,Weekend flight
+61,2025-07-01,85.00,icecream,Special icecream
+62,2025-07-02,55.00,food,Healthy takeout
+63,2025-07-03,250.00,entertainment,Museum entry fees
+64,2025-07-04,30.00,transport,Bus tickets
+65,2025-07-05,300.00,bills,Utility bill combined
+66,2025-07-06,180.00,shopping,Sportswear purchase
+67,2025-07-07,70.00,groceries,Fresh vegetables
+68,2025-07-08,75.00,utilities,Subscription renewal
+69,2025-07-09,115.00,dining,Dinner party
+70,2025-07-10,220.00,travel,Train ride
+71,2025-08-01,95.00,icecream,Icecream social
+72,2025-08-02,70.00,food,Restaurant meal
+73,2025-08-03,260.00,entertainment,Theater ticket
+74,2025-08-04,45.00,transport,Taxi fare
+75,2025-08-05,300.00,bills,Phone bill
+76,2025-08-06,160.00,shopping,New backpack
+77,2025-08-07,75.00,groceries,Weekly shopping
+78,2025-08-08,90.00,utilities,Cable subscription
+79,2025-08-09,110.00,dining,Casual dining
+80,2025-08-10,180.00,travel,Weekend trip
+81,2025-09-01,150.00,icecream,Bought an Icecream
+82,2025-09-02,75.50,food,Bought food from hotel
+83,2025-09-03,200.00,entertainment,Movie tickets for cinema
+84,2025-09-04,50.25,transport,Taxi ride to airport
+85,2025-09-05,300.00,bills,Electricity bill payment
+86,2025-09-06,120.00,shopping,New clothes from mall
+87,2025-09-07,45.00,groceries,Grocery shopping at market
+88,2025-09-08,80.00,utilities,Internet bill for September
+89,2025-09-09,90.75,dining,Dinner at Italian restaurant
+90,2025-09-10,150.00,travel,Bus ticket to nearby city
+91,2025-10-01,95.00,icecream,Bought assorted icecream
+92,2025-10-02,60.00,food,Lunch at cafe
+93,2025-10-03,230.00,entertainment,Concert tickets
+94,2025-10-04,40.00,transport,Subway pass refill
+95,2025-10-05,280.00,bills,Water bill settlement
+96,2025-10-06,180.00,shopping,Shoes purchase
+97,2025-10-07,55.00,groceries,Fruits and vegetables
+98,2025-10-08,70.00,utilities,Gas bill payment
+99,2025-10-09,105.00,dining,Family dinner outing
+100,2025-10-10,200.00,travel,Train ticket to coast

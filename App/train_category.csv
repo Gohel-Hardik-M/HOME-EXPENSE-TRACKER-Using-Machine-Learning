@@ -1,0 +1,226 @@
+expense_category,month,year,expense_amount
+Utilities,1,2023,150
+Groceries,1,2023,300
+Transportation,1,2023,100
+Healthcare,1,2023,200
+Entertainment,1,2023,250
+Education,1,2023,400
+Personal Care,1,2023,80
+Debt Payments,1,2023,500
+Savings,1,2023,300
+Alcohol,1,2023,60
+Fruits,1,2023,40
+Gym,1,2023,50
+Skincare,1,2023,70
+Books,1,2023,30
+Gifts,1,2023,100
+Utilities,2,2023,160
+Groceries,2,2023,320
+Transportation,2,2023,110
+Healthcare,2,2023,210
+Entertainment,2,2023,260
+Education,2,2023,410
+Personal Care,2,2023,90
+Debt Payments,2,2023,510
+Savings,2,2023,310
+Alcohol,2,2023,70
+Fruits,2,2023,50
+Gym,2,2023,55
+Skincare,2,2023,75
+Books,2,2023,35
+Gifts,2,2023,110
+Utilities,3,2023,170
+Groceries,3,2023,340
+Transportation,3,2023,120
+Healthcare,3,2023,220
+Entertainment,3,2023,270
+Education,3,2023,420
+Personal Care,3,2023,100
+Debt Payments,3,2023,520
+Savings,3,2023,320
+Alcohol,3,2023,80
+Fruits,3,2023,60
+Gym,3,2023,60
+Skincare,3,2023,80
+Books,3,2023,40
+Gifts,3,2023,120
+Utilities,1,2025,155
+Groceries,1,2025,310
+Transportation,1,2025,105
+Healthcare,1,2025,205
+Entertainment,1,2025,255
+Education,1,2025,405
+Personal Care,1,2025,85
+Debt Payments,1,2025,505
+Savings,1,2025,305
+Alcohol,1,2025,65
+Fruits,1,2025,45
+Gym,1,2025,55
+Skincare,1,2025,75
+Books,1,2025,35
+Gifts,1,2025,105
+Utilities,2,2025,165
+Groceries,2,2025,325
+Transportation,2,2025,115
+Healthcare,2,2025,215
+Entertainment,2,2025,265
+Education,2,2025,415
+Personal Care,2,2025,95
+Debt Payments,2,2025,515
+Savings,2,2025,315
+Alcohol,2,2025,75
+Fruits,2,2025,55
+Gym,2,2025,60
+Skincare,2,2025,80
+Books,2,2025,40
+Gifts,2,2025,115
+Utilities,3,2025,175
+Groceries,3,2025,340
+Transportation,3,2025,125
+Healthcare,3,2025,225
+Entertainment,3,2025,275
+Education,3,2025,425
+Personal Care,3,2025,100
+Debt Payments,3,2025,525
+Savings,3,2025,325
+Alcohol,3,2025,85
+Fruits,3,2025,65
+Gym,3,2025,65
+Skincare,3,2025,85
+Books,3,2025,45
+Gifts,3,2025,125
+Utilities,4,2025,185
+Groceries,4,2025,355
+Transportation,4,2025,135
+Healthcare,4,2025,235
+Entertainment,4,2025,285
+Education,4,2025,435
+Personal Care,4,2025,105
+Debt Payments,4,2025,535
+Savings,4,2025,335
+Alcohol,4,2025,95
+Fruits,4,2025,75
+Gym,4,2025,70
+Skincare,4,2025,90
+Books,4,2025,50
+Gifts,4,2025,135
+Utilities,5,2025,195
+Groceries,5,2025,370
+Transportation,5,2025,145
+Healthcare,5,2025,245
+Entertainment,5,2025,295
+Education,5,2025,445
+Personal Care,5,2025,110
+Debt Payments,5,2025,545
+Savings,5,2025,345
+Alcohol,5,2025,105
+Fruits,5,2025,85
+Gym,5,2025,75
+Skincare,5,2025,95
+Books,5,2025,55
+Gifts,5,2025,145
+Utilities,6,2025,205
+Groceries,6,2025,385
+Transportation,6,2025,155
+Healthcare,6,2025,255
+Entertainment,6,2025,305
+Education,6,2025,455
+Personal Care,6,2025,115
+Debt Payments,6,2025,555
+Savings,6,2025,355
+Alcohol,6,2025,115
+Fruits,6,2025,95
+Gym,6,2025,80
+Skincare,6,2025,100
+Books,6,2025,60
+Gifts,6,2025,155
+Utilities,7,2025,215
+Groceries,7,2025,400
+Transportation,7,2025,165
+Healthcare,7,2025,265
+Entertainment,7,2025,315
+Education,7,2025,465
+Personal Care,7,2025,120
+Debt Payments,7,2025,565
+Savings,7,2025,365
+Alcohol,7,2025,125
+Fruits,7,2025,105
+Gym,7,2025,85
+Skincare,7,2025,105
+Books,7,2025,65
+Gifts,7,2025,165
+Utilities,8,2025,225
+Groceries,8,2025,415
+Transportation,8,2025,175
+Healthcare,8,2025,275
+Entertainment,8,2025,325
+Education,8,2025,475
+Personal Care,8,2025,125
+Debt Payments,8,2025,575
+Savings,8,2025,375
+Alcohol,8,2025,135
+Fruits,8,2025,115
+Gym,8,2025,90
+Skincare,8,2025,110
+Books,8,2025,70
+Gifts,8,2025,175
+Utilities,9,2025,235
+Groceries,9,2025,430
+Transportation,9,2025,185
+Healthcare,9,2025,285
+Entertainment,9,2025,335
+Education,9,2025,485
+Personal Care,9,2025,130
+Debt Payments,9,2025,585
+Savings,9,2025,385
+Alcohol,9,2025,145
+Fruits,9,2025,125
+Gym,9,2025,95
+Skincare,9,2025,115
+Books,9,2025,75
+Gifts,9,2025,185
+Utilities,10,2025,245
+Groceries,10,2025,445
+Transportation,10,2025,195
+Healthcare,10,2025,295
+Entertainment,10,2025,345
+Education,10,2025,495
+Personal Care,10,2025,135
+Debt Payments,10,2025,595
+Savings,10,2025,395
+Alcohol,10,2025,155
+Fruits,10,2025,135
+Gym,10,2025,100
+Skincare,10,2025,120
+Books,10,2025,80
+Gifts,10,2025,195
+Utilities,11,2025,255
+Groceries,11,2025,460
+Transportation,11,2025,205
+Healthcare,11,2025,305
+Entertainment,11,2025,355
+Education,11,2025,505
+Personal Care,11,2025,140
+Debt Payments,11,2025,605
+Savings,11,2025,405
+Alcohol,11,2025,165
+Fruits,11,2025,145
+Gym,11,2025,105
+Skincare,11,2025,125
+Books,11,2025,85
+Gifts,11,2025,205
+Utilities,12,2025,265
+Groceries,12,2025,475
+Transportation,12,2025,215
+Healthcare,12,2025,315
+Entertainment,12,2025,365
+Education,12,2025,515
+Personal Care,12,2025,145
+Debt Payments,12,2025,615
+Savings,12,2025,415
+Alcohol,12,2025,175
+Fruits,12,2025,155
+Gym,12,2025,110
+Skincare,12,2025,130
+Books,12,2025,90
+Gifts,12,2025,215

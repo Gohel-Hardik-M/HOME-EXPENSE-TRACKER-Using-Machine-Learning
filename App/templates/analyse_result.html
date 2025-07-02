@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results - Home Expense Tracker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 60px; /* To account for fixed navbar */
+        }
+        
+        .navbar {
+            background-color: #4f46e5 !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #4f46e5;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .chart-container {
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background-color: white;
+            padding: 20px;
+        }
+
+        .tips {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        .tips h4 {
+            color: #4f46e5;
+            margin-bottom: 15px;
+        }
+
+        .tips p {
+            margin: 5px 0;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-column, .right-column {
+            flex: 1;
+            margin: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-wallet"></i> Home Expense Tracker
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('analyse')}}" >
+                            <i class="fas fa-plus-circle"></i> Add Expense
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-chart-pie"></i> Analyze
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-lightbulb"></i> Tips
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="downloadExpensesBtn">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Analysis Results</h2>
+
+        <div class="row">
+            <!-- Left Column: Pie Chart and Expenses -->
+            <div class="left-column">
+                <div class="chart-container">
+                    <h4>Expenses Distribution</h4>
+                    <p style="border:2px solid black;"></p>
+                    <div class="pie-chart">
+                        <img src='static/pie_chart.png' alt="Expenses Distribution Chart" class="img-fluid">
+                    </div>
+                    <h4><i class="fas fa-arrow-right"></i> Maximum Expense: ₹{{ max_expense_price.amount }} In {{ max_expense_price.category }}</h4>
+                    <h4><i class="fas fa-arrow-right"></i> Minimum Expense: ₹{{ min_expense_.amount }} In {{ min_expense_.category }}</h4>
+                </div>
+            </div>
+
+            <!-- Right Column: AI Predictions -->
+            <div class="right-column">
+                <div class="chart-container">
+                    <h4>Predicted Expenses for Next 3 Months</h4>
+                    <p style="border:2px solid black;"></p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Predicted Expense</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for month, predicted_expense in monthly_expenses_ %}
+                            <tr>
+                                <td>  {{ predicted_expense }}</td>
+                                <td> ₹  {{ month }}</td>                                
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+            <p style="border:2px solid black;"></p>
+            <h4>Tips for Better Expense Management</h4>
+            <p style="border:2px solid black;"></p>
+            {% for tip in tips %}
+            <p><i class="fas fa-arrow-right"></i>  {{ tip }}</p>
+            {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="tips">
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
