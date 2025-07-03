@@ -38,6 +38,13 @@ Technolgied Used :
                                         => Used as the database to store the user expenses.
                         - HTML / CSS  / JQuery :
                                         => Used to create and style the user interface for the application.
+
+View :
+
+
+ ![image](https://github.com/user-attachments/assets/79da6dc2-8594-4a68-a7b2-2437c3a2ee5c)
+ 
+
                             
                         
 
