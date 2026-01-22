@@ -71,10 +71,10 @@ You can import it in two ways:
 ### Option 1: Using phpMyAdmin (XAMPP)
 
 ```
-1. Start **XAMPP** and run **Apache** + **MySQL** modules.
+1. Start XAMPP and run Apache + MySQL modules.
 2. Open [http://localhost/phpmyadmin](http://localhost/phpmyadmin) in your browser.
-3. Go to the **Import** tab.
-4. Select the uploaded file (`home_tracker.sql`) at **`Database - MYSQL/    home_tracker.sql`** and click **Go**.
+3. Go to the Import tab.
+4. Select the uploaded file home_tracker.sql at Database - MYSQL/    home_tracker.sql and click Go.
 5. The tables will be created automatically.
 ```
 
