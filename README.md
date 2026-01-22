@@ -54,7 +54,24 @@
 ![image](https://github.com/user-attachments/assets/30b15804-ea59-4d69-abf3-d117cb248877)
 
 
+
+
  
+## ⚙️ How to Use
+
+### Run the Web App 
+You can directly run this project by running the Flask app:
+
+```bash
+# Clone the repository
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+python app.py
+```
+
 
                             
                         
