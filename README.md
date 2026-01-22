@@ -59,16 +59,46 @@
  
 ## ⚙️ How to Use
 
+
+#### 📝 Step : 1️⃣
+### 🗄️ Database Setup
+
+This project requires a MySQL database.  
+A ready‑to‑use SQL dump file (**`home_tracker.sql`**) is included in the repository at : **`Database - MYSQL/home_tracker.sql`**
+
+You can import it in two ways:
+
+### Option 1: Using phpMyAdmin (XAMPP)
+1. Start **XAMPP** and run **Apache** + **MySQL** modules.
+2. Open [http://localhost/phpmyadmin](http://localhost/phpmyadmin) in your browser.
+3. Go to the **Import** tab.
+4. Select the uploaded file (`home_tracker.sql`) at **`Database - MYSQL/    home_tracker.sql`** and click **Go**.
+5. The tables will be created automatically.
+
+### Option 2: Using MySQL Command Line
+```bash
+# Log in to MySQL
+mysql -u root -p
+
+# Create a new database
+CREATE DATABASE home_tracker;
+
+# Exit MySQL and run the import
+mysql -u root -p home_tracker < database.sql
+
+```
+#### 📝 Step : 2️⃣
+
 ### Run the Web App 
 You can directly run this project by running the Flask app:
 
 ```bash
-# Clone the repository
+# ⚙️ Clone the repository
 
-# Install dependencies
+# 👉 Install dependencies
 pip install -r requirements.txt
 
-# Run the app
+# 🚀 Run the app
 python app.py
 ```
 
